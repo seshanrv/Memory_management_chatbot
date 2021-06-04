@@ -44,6 +44,21 @@ ChatBot::~ChatBot()
 
 //// STUDENT CODE
 ////
+ChatBot& ChatBot::operator=(const ChatBot& source){
+    if (this == &source)
+        return *this;
+    
+    if (_image != NULL){
+        delete _image; 
+    }
+    _image = new wxBitmap(source._image->GetSize());
+    *_image = *source._image;
+    _currentNode = source._currentNode;
+    _rootNode = source._currentNode;
+    _chatLogic = source._chatLogic;
+
+    return *this;
+}
 
 ////
 //// EOF STUDENT CODE
