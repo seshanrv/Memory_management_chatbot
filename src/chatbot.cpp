@@ -65,9 +65,9 @@ ChatBot::ChatBot(const ChatBot& source){
 
     _image = new wxBitmap(source._image->GetSize());
     *_image = *source._image;
-    *_currentNode = *source._currentNode;
-    *_rootNode = *source._currentNode;
-    *_chatLogic = *source._chatLogic;
+    _currentNode = source._currentNode;
+    _rootNode = source._currentNode;
+    _chatLogic = source._chatLogic;
 }
 
 ChatBot& ChatBot::operator=(ChatBot&& source){
