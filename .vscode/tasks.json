@@ -4,7 +4,9 @@
         {
             "label": "g++ build active file",
             "type": "shell",
-            "command": "rm -rf build && mkdir build && cd ./build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make"
+            "command": "cd ./build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make"
         }
     ]
 }
+
+//rm -rf build && mkdir build && 
